@@ -81,15 +81,15 @@ app.get('/json', (req, res) => {
   });
 })
 
-app.get('/a1', (req, res) => {
-  setTimeout(function(){
-    res.send('Hello TOM!')
-  },1000);
-})
 app.get('/a2', (req, res) => {
   setTimeout(function(){
     res.send('Hello JERRY!')
   },2000);
+})
+app.get('/a1', (req, res) => {
+  setTimeout(function(){
+    res.send('Hello TOM!')
+  },5000);
 })
 app.get('/a3', (req, res) => {
   setTimeout(function(){
@@ -98,7 +98,7 @@ app.get('/a3', (req, res) => {
 })
 
 // 路由
-app.get('/data', (req, res) => {
+app.get('/data', (req, res) => { 
   res.send('Hello World!')
 })
 app.get('/data1', (req, res) => {
