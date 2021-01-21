@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 打印的是函数
+        // console.log(typeof Promise);
+        // 打印的是Promise
+        // console.dir(Promise)
+        const p = new Promise(function (resolve, reject) {
+            // 成功调用resolve,失败调用reject
+            setTimeout(function () {
+                var flag = true
+                if (flag) {
+                    resolve('Hello!')
+                } else {
+                    reject('出错了😭')
+                }
+            }, 200)
+        })
+        p.then(function (data) {
+            // 从resolve得到正常结果
+            console.log(data);
+        }, function (date) {
+            // 从reject得到错误信息
+            console.log(date);
+        })
+    </script>
+</body>
+
+</html>

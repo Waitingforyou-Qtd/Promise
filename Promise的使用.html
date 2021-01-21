@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script src="js/vue.js"></script>
+    <script>
+        //TODO: Promise一般作为一个构造函数去使用,一般需要new一下
+        // 接受一个函数
+        const x = new Promise((resolve, reject) => {
+            setTimeout(() => {
+                if (Math.random() > .5) {
+                    resolve('成功了😝')
+                } else {
+                    reject("失败了😱")
+                }
+            })
+        })
+        x.then(data => {
+            console.log(data);
+        }, err => {
+            console.log(err);
+        })
+    </script>
+</body>
+
+</html>
