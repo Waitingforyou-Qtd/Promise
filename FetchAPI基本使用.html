@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 通过fetch调用接口 通过thin获取数据 
+        fetch('http://localhost:3000/fdata').then(function (data) {
+            // 调用text 返回的是Promise实例对象 通过Promise得到最终数据
+            return data.text()
+        }).then(function (data) {
+            console.log(data);
+        })
+    </script>
+</body>
+
+</html>
