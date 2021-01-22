@@ -17,9 +17,12 @@
         // })
         async function queryData() {
             var ret = await axios.get('adata')
-            console.log(ret);
+            // console.log(ret);
+            return ret.data
         }
-        queryData()
+        queryData().then(function (data) {
+            console.log(data)
+        })
     </script>
 </body>
 
