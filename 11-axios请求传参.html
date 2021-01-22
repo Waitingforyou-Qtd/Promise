@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <title>Document</title>
 </head>
+
 <body>
-  
+
   <script type="text/javascript" src="js/axios.js"></script>
   <script type="text/javascript">
     /*
@@ -35,12 +37,12 @@
     //   console.log(ret.data)
     // })
 
-    // axios.post('http://localhost:3000/axios', {
-    //   uname: 'lisi',
-    //   pwd: 123
-    // }).then(function(ret){
-    //   console.log(ret.data)
-    // })
+    axios.post('http://localhost:3000/axios', {
+      uname: 'lisi',
+      pwd: 123
+    }).then(function (ret) {
+      console.log(ret.data)
+    })
     // var params = new URLSearchParams();
     // params.append('uname', 'zhangsan');
     // params.append('pwd', '111');
@@ -52,12 +54,10 @@
     axios.put('http://localhost:3000/axios/123', {
       uname: 'lisi',
       pwd: 123
-    }).then(function(ret){
+    }).then(function (ret) {
       console.log(ret.data)
     })
-
-    
-
   </script>
 </body>
+
 </html>

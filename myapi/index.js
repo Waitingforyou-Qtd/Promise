@@ -48,8 +48,8 @@ app.put('/axios/:id', (req, res) => {
 
 app.get('/axios-json', (req, res) => {
   res.json({
-    uname: 'lisi',
-    age: 12
+    uname: 'zx',
+    age: 20
   })
 })
 
