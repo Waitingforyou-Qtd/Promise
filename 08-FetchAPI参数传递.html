@@ -1,9 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <title>Document</title>
 </head>
+
 <body>
   <script type="text/javascript">
     /*
@@ -73,20 +75,21 @@
 
     // PUT请求传参
     fetch('http://localhost:3000/books/123', {
-      method: 'put',
-      body: JSON.stringify({
-        uname: '张三',
-        pwd: '789'
-      }),
-      headers: {
-        'Content-Type': 'application/json'
-      }
-    })
-      .then(function(data){
+        method: 'put',
+        body: JSON.stringify({
+          uname: '张三',
+          pwd: '789'
+        }),
+        headers: {
+          'Content-Type': 'application/json'
+        }
+      })
+      .then(function (data) {
         return data.text();
-      }).then(function(data){
+      }).then(function (data) {
         console.log(data)
       });
   </script>
 </body>
+
 </html>
