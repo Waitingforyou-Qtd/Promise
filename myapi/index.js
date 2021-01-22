@@ -54,7 +54,7 @@ app.get('/axios-json', (req, res) => {
 })
 
 app.get('/fdata', (req, res) => {
-  res.send('Hello Fetch!!!')
+  res.send('Hello Fetch!')
 })
 app.get('/books', (req, res) => {
   res.send('传统的URL传递参数!' + req.query.id)
@@ -74,8 +74,8 @@ app.put('/books/:id', (req, res) => {
 
 app.get('/json', (req, res) => {
   res.json({
-    uname: 'lisi',
-    age: 13,
+    uname: 'zx',
+    age: 20,
     gender: 'male'
   })
 })
@@ -109,7 +109,7 @@ app.get('/data2', (req, res) => {
   res.send('Hello JERRY!')
 })
 
-// 启动监听 
+// 启动监听
 app.listen(3000, () => {
   console.log('running...')
 })

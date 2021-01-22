@@ -12,7 +12,7 @@
         // GET参数传递-传统URL
         // 传统的url通过?传参
         // fetch('http://localhost:3000/books?id=aaa', {
-        // 请求方式为get
+        //         // 请求方式为get
         //         method: 'get'
         //     })
         //     .then(function (data) {
@@ -25,7 +25,7 @@
 
         // GET参数传递-restful形式的URL 通过/传参
         // fetch('http://localhost:3000/books/bbb', {
-        // 请求方式为get
+        //         // 请求方式为get
         //         method: 'get'
         //     })
         //     .then(function (data) {
@@ -50,6 +50,56 @@
         // --------------------------------------
 
         // POST请求传参
+        // fetch('http://localhost:3000/books', {
+        //         // 请求方式为post
+        //         method: 'post',
+        //         body: 'uname=zx&pwd=123456',
+        //         headers: {
+        //             'Content-Type': 'application/x-www-form-urlencoded'
+        //         }
+        //     })
+        //     .then(function (data) {
+        //         return data.text()
+        //     }).then(function (data) {
+        //         console.log(data);
+        //     })
+
+        // --------------------------------------
+
+        // POST请求传参
+        // fetch('http://localhost:3000/books', {
+        //         method: 'post',
+        //         body: JSON.stringify({
+        //             uname: '张三',
+        //             pwd: '456'
+        //         }),
+        //         headers: {
+        //             'Content-Type': 'application/json'
+        //         }
+        //     })
+        //     .then(function (data) {
+        //         return data.text();
+        //     }).then(function (data) {
+        //         console.log(data)
+        //     });
+
+
+        // PUT请求传参
+        fetch('http://localhost:3000/books/123', {
+                method: 'put',
+                body: JSON.stringify({
+                    uname: '张三',
+                    pwd: '789'
+                }),
+                headers: {
+                    'Content-Type': 'application/json'
+                }
+            })
+            .then(function (data) {
+                return data.text();
+            }).then(function (data) {
+                console.log(data)
+            });
     </script>
 </body>
 
