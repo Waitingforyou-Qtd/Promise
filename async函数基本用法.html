@@ -16,9 +16,13 @@
         //     console.log(ret.data);
         // })
         async function queryData() {
-            var ret = await axios.get('adata')
-            // console.log(ret);
-            return ret.data
+            var ret = await new Promise(function (resolve, reject) {
+                setTimeout(function () {
+                    resolve('aaaaa')
+                }, 3000);
+            })
+            // console.log(ret.data)
+            return ret;
         }
         queryData().then(function (data) {
             console.log(data)

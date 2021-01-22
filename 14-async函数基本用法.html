@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <title>Document</title>
 </head>
+
 <body>
-  
+
   <script type="text/javascript" src="js/axios.js"></script>
   <script type="text/javascript">
     /*
@@ -25,17 +27,18 @@
     // }
 
     async function queryData() {
-      var ret = await new Promise(function(resolve, reject){
-        setTimeout(function(){
+      var ret = await new Promise(function (resolve, reject) {
+        setTimeout(function () {
           resolve('nihao')
-        },1000);
+        }, 1000);
       })
       // console.log(ret.data)
       return ret;
     }
-    queryData().then(function(data){ 
+    queryData().then(function (data) {
       console.log(data)
     })
   </script>
 </body>
+
 </html>
