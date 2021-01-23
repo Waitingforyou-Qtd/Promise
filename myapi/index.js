@@ -76,7 +76,7 @@ app.get('/json', (req, res) => {
   res.json({
     uname: 'zx',
     age: 20,
-    gender: 'male'
+    gender: 'nan'
   })
 })
 
