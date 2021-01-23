@@ -135,6 +135,7 @@
             var ret = await axios.post('books', {
               name: this.name
             })
+            // 这个 200 是后端返回数据的一部分，后端规定 200 代表成功，并不是 HTTP 状态码
             if (ret.status == 200) {
               // 重新加载列表数据
               this.queryData();
@@ -145,26 +146,18 @@
           this.name = '';
         },
         toEdit: async function (id) {
-          // flag状态位用于区分编辑和添加操作
           this.flag = true;
-          // 根据id查询出对应的图书信息
           var ret = await axios.get('books/' + id);
           this.id = ret.id;
           this.name = ret.name;
         },
         deleteBook: async function (id) {
-          // 删除图书
           var ret = await axios.delete('books/' + id);
           if (ret.status == 200) {
-            // 重新加载列表数据
             this.queryData();
           }
         },
-        queryData: async function () {
-          // 调用后台接口获取图书列表数据
-          // var ret = await axios.get('books');
-          // this.books = ret.data;
-
+        async queryData() {
           this.books = await axios.get('books');
         }
       },
@@ -176,13 +169,8 @@
       },
       watch: {
         name: async function (val) {
-          // 验证图书名称是否已经存在
-          // var flag = this.books.some(function(item){
-          //   return item.name == val;
-          // });
           var ret = await axios.get('/books/book/' + this.name);
           if (ret.status == 1) {
-            // 图书名称存在
             this.submitFlag = true;
           } else {
             // 图书名称不存在
@@ -191,18 +179,7 @@
         }
       },
       mounted: function () {
-        var that = this;
-        axios.get('books').then(function (data) {
-          console.log(data.data)
-          that.books = data.data;
-        })
-
-        // axios.get('books').then((data)=>{
-        //   console.log(data.data)
-        //   this.books = data.data;
-        // })
-
-        // this.queryData();
+        this.queryData();
       }
     });
   </script>
