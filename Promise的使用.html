@@ -13,6 +13,7 @@
         //TODO: Promise一般作为一个构造函数去使用,一般需要new一下
         // 接受一个函数
         const x = new Promise((resolve, reject) => {
+            // 异步任务
             setTimeout(() => {
                 if (Math.random() > .5) {
                     resolve('成功了😝')
