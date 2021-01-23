@@ -61,6 +61,7 @@
       图书管理-添加图书
     */
     axios.defaults.baseURL = 'http://localhost:3000/';
+    // 相应拦截器
     axios.interceptors.response.use(function (res) {
       return res.data;
     }, function (error) {
@@ -137,7 +138,7 @@
             })
             // 这个 200 是后端返回数据的一部分，后端规定 200 代表成功，并不是 HTTP 状态码
             if (ret.status == 200) {
-              // 重新加载列表数据
+              // 重新加载列表数据 调用queryData()
               this.queryData();
             }
           }
