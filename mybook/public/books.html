@@ -157,7 +157,9 @@
         },
         deleteBook: async function (id) {
           var ret = await axios.delete('books/' + id);
+          // 判断状态
           if (ret.status == 200) {
+            // 重新加载列表数据
             this.queryData();
           }
         },
