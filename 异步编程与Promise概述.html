@@ -13,16 +13,16 @@
     <script>
         var x = '^^^^^^^^'
         // 使用Ajax调用接口
-        // $.ajax({
-        //     url: 'http://localhost:3000/data',
-        //     success: function (data) {
-        //         x = data;
-        //         // 在回调函数中可以打印
-        //         console.log(x);
-        //     }
-        // });
-        // // 这里没有打印的结果是因为异步
-        // console.log(x);
+        $.ajax({
+            url: 'http://localhost:3000/data',
+            success: function (data) {
+                x = data;
+                // 在回调函数中可以打印
+                console.log(x);
+            }
+        });
+        // // TODO:这里没有打印的结果是因为异步
+        console.log(x);
 
         // $.ajax({
         //     url: 'http://localhost:3000/data',
@@ -44,24 +44,24 @@
         // });
 
         // 嵌套方式 形成回调地狱
-        $.ajax({
-            url: 'http://localhost:3000/data',
-            success: function (data) {
-                console.log(data);
-                $.ajax({
-                    url: 'http://localhost:3000/data1',
-                    success: function (data) {
-                        console.log(data);
-                        $.ajax({
-                            url: 'http://localhost:3000/data2',
-                            success: function (data) {
-                                console.log(data);
-                            }
-                        });
-                    }
-                });
-            }
-        });
+        // $.ajax({
+        //     url: 'http://localhost:3000/data',
+        //     success: function (data) {
+        //         console.log(data);
+        //         $.ajax({
+        //             url: 'http://localhost:3000/data1',
+        //             success: function (data) {
+        //                 console.log(data);
+        //                 $.ajax({
+        //                     url: 'http://localhost:3000/data2',
+        //                     success: function (data) {
+        //                         console.log(data);
+        //                     }
+        //                 });
+        //             }
+        //         });
+        //     }
+        // });
     </script>
 </body>
 
