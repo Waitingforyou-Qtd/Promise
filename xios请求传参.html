@@ -21,45 +21,45 @@
         //     console.log(ret.data)
         // })
 
-        // axios.get('http://localhost:3000/axios', {
-        //     params: {
-        //         id: 'abcdef'
-        //     }
-        // }).then(function (ret) {
-        //     console.log(ret.data)
-        // })
+        axios.get('http://localhost:3000/axios', {
+            params: {
+                id: '^_^abcdef'
+            }
+        }).then(function (ret) {
+            console.log(ret.data)
+        })
 
 
         // axios delete 请求传参
-        // axios.delete('http://localhost:3000/axios', {
-        //     params: {
-        //         id: 123456
-        //     }
-        // }).then(function (ret) {
-        //     console.log(ret.data)
-        // })
+        axios.delete('http://localhost:3000/axios', {
+            params: {
+                id: 123456
+            }
+        }).then(function (ret) {
+            console.log(ret.data)
+        })
 
 
 
-        // axios.post('http://localhost:3000/axios', {
-        //     uname: 'lisi',
-        //     pwd: 123
-        // }).then(function (ret) {
-        //     console.log(ret.data)
-        // })
-        // var params = new URLSearchParams();
-        // params.append('uname', 'zhangsan');
-        // params.append('pwd', '111');
-        // axios.post('http://localhost:3000/axios', params).then(function (ret) {
-        //     console.log(ret.data)
-        // })
-
-
-
-        axios put 请求传参
-        axios.put('http://localhost:3000/axios/123', {
-            uname: 'lisi',
+        axios.post('http://localhost:3000/axios', {
+            uname: 'zx',
             pwd: 123
+        }).then(function (ret) {
+            console.log(ret.data)
+        })
+        var params = new URLSearchParams();
+        params.append('uname', 'zhangsan');
+        params.append('pwd', '111');
+        axios.post('http://localhost:3000/axios', params).then(function (ret) {
+            console.log(ret.data)
+        })
+
+
+
+        // axios put 请求传参
+        axios.put('http://localhost:3000/axios/123', {
+            uname: 'zxzx',
+            pwd: 123456
         }).then(function (ret) {
             console.log(ret.data)
         })

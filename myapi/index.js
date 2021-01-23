@@ -103,7 +103,7 @@ app.get('/data', (req, res) => {
 app.get('/data1', (req, res) => {
   setTimeout(function () {
     res.send('Hello TOM!')
-  }, 1000)
+  }, 5000)
 })
 app.get('/data2', (req, res) => {
   res.send('Hello JERRY!')

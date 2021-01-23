@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        function queryData(url) {
+            return new Promise(function (resolve, reject) {
+                $.ajax({
+                    url,
+                    success(data) {
+                        resolve(data)
+                    },
+                    Error(err) {
+                        reject(err)
+                    }
+                })
+            })
+        }
+        async function run() {
+            let r1 = await queryData('http://localhost:3000/data')
+            let r2 = await queryData('http://localhost:3000/data1');
+            let r3 = await queryData('http://localhost:3000/data2');
+            console.log(r1, r2, r3);
+        }
+        run()
+    </script>
+
+</body>
+
+</html>

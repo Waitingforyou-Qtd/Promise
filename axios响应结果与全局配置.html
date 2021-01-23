@@ -19,10 +19,10 @@
 
         // 配置请求的基准URL地址
         axios.defaults.baseURL = 'http://localhost:3000/';
-        // 配置请求头信息
+        // // 配置请求头信息
         axios.defaults.headers['mytoken'] = 'hello';
         axios.get('axios-json').then(function (ret) {
-            console.log(ret.data.uname)
+            console.log(ret.data)
         })
     </script>
 </body>

@@ -11,7 +11,7 @@
     <script>
         // GET参数传递-传统URL
         // 传统的url通过?传参
-        // fetch('http://localhost:3000/books?id=aaa', {
+        // fetch('http://localhost:3000/books?id=aaaaa', {
         //         // 请求方式为get
         //         method: 'get'
         //     })
@@ -24,7 +24,7 @@
         // --------------------------------------
 
         // GET参数传递-restful形式的URL 通过/传参
-        // fetch('http://localhost:3000/books/bbb', {
+        // fetch('http://localhost:3000/books/bbbbb', {
         //         // 请求方式为get
         //         method: 'get'
         //     })
@@ -37,7 +37,7 @@
         // --------------------------------------
 
         // DELETE请求方式参数传递
-        // fetch('http://localhost:3000/books/ccc', {
+        // fetch('http://localhost:3000/books/ccccc', {
         //         // 请求方式为delete
         //         method: 'delete'
         //     })
@@ -67,11 +67,12 @@
         // --------------------------------------
 
         // POST请求传参
+        
         // fetch('http://localhost:3000/books', {
         //         method: 'post',
         //         body: JSON.stringify({
-        //             uname: '张三',
-        //             pwd: '456'
+        //             uname: '周xx',
+        //             pwd: '456666'
         //         }),
         //         headers: {
         //             'Content-Type': 'application/json'
@@ -84,12 +85,12 @@
         //     });
 
 
-        // PUT请求传参
+        // // PUT请求传参
         fetch('http://localhost:3000/books/123', {
                 method: 'put',
                 body: JSON.stringify({
-                    uname: '张三',
-                    pwd: '789'
+                    uname: '张三3',
+                    pwd: '78999'
                 }),
                 headers: {
                     'Content-Type': 'application/json'
