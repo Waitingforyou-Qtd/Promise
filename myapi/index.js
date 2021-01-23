@@ -11,9 +11,9 @@ app.use(bodyParser.urlencoded({ extended: false }))
 app.all('*', function (req, res, next) {
   res.header('Access-Control-Allow-Origin', '*')
   res.header('Access-Control-Allow-Methods', 'PUT, GET, POST, DELETE, OPTIONS')
-  res.header('Access-Control-Allow-Headers', 'X-Requested-With')
-  res.header('Access-Control-Allow-Headers', 'Content-Type')
-  res.header('Access-Control-Allow-Headers', 'mytoken')
+  res.header('Access-Control-Allow-Headers', 'X-Requested-With,Content-Type,mytoken')
+  // res.header('Access-Control-Allow-Headers', 'Content-Type')
+  // res.header('Access-Control-Allow-Headers', 'mytoken')
   next()
 })
 app.get('/async1', (req, res) => {
@@ -40,10 +40,10 @@ app.delete('/axios', (req, res) => {
   res.send('axios get 传递参数' + req.query.id)
 })
 app.post('/axios', (req, res) => {
-  res.send('axios post 传递参数' + req.body.uname + '---' + req.body.pwd)
+  res.send('axios post 传递参数' + req.body.uname + '^_^ ^_^' + req.body.pwd)
 })
 app.put('/axios/:id', (req, res) => {
-  res.send('axios put 传递参数' + req.params.id + '---' + req.body.uname + '---' + req.body.pwd)
+  res.send('axios put 传递参数' + req.params.id + '^_^ ^_^' + req.body.uname + '^_^ ^_^' + req.body.pwd)
 })
 
 app.get('/axios-json', (req, res) => {
@@ -66,10 +66,10 @@ app.delete('/books/:id', (req, res) => {
   res.send('DELETE请求传递参数!' + req.params.id)
 })
 app.post('/books', (req, res) => {
-  res.send('POST请求传递参数!' + req.body.uname + '---' + req.body.pwd)
+  res.send('POST请求传递参数!' + req.body.uname + '^_^ ^_^' + req.body.pwd)
 })
 app.put('/books/:id', (req, res) => {
-  res.send('PUT请求传递参数!' + req.params.id + '---' + req.body.uname + '---' + req.body.pwd)
+  res.send('PUT请求传递参数!' + req.params.id + '^_^ ^_^' + req.body.uname + '^_^ ^_^' + req.body.pwd)
 })
 
 app.get('/json', (req, res) => {
