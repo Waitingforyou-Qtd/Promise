@@ -17,13 +17,13 @@
         }, function (err) {
             console.log(err)
         })
-        // axios.interceptors.response.use(function (res) {
-        //     console.log(res)
-        //     var data = res.data;
-        //     return data;
-        // }, function (err) {
-        //     console.log(err)
-        // })
+        axios.interceptors.response.use(function (res) {
+            console.log(res)
+            var data = res.data;
+            return data;
+        }, function (err) {
+            console.log(err)
+        })
         axios.get('http://localhost:3000/adata').then(function (data) {
             console.log(data)
         })
