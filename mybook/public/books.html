@@ -130,6 +130,7 @@
               // 重新加载列表数据
               this.queryData();
             }
+            // 状态改为false
             this.flag = false;
           } else {
             // 添加图书
@@ -147,7 +148,9 @@
           this.name = '';
         },
         toEdit: async function (id) {
+          // flag状态为区分编辑和添加操作
           this.flag = true;
+          // 根据ID查询出相应的图书信息
           var ret = await axios.get('books/' + id);
           this.id = ret.id;
           this.name = ret.name;
@@ -171,6 +174,7 @@
       watch: {
         name: async function (val) {
           var ret = await axios.get('/books/book/' + this.name);
+          // 判断图书是否存在
           if (ret.status == 1) {
             this.submitFlag = true;
           } else {
