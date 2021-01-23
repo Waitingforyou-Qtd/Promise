@@ -19,7 +19,7 @@
                         resolve(xhr.responseText);
                     } else {
                         // 处理异常情况
-                        reject('服务器错误');
+                        reject('服务器出错了😭');
                     }
                 };
                 xhr.open('get', url);
@@ -29,11 +29,12 @@
         var p1 = queryData('http://localhost:3000/a1');
         var p2 = queryData('http://localhost:3000/a2');
         var p3 = queryData('http://localhost:3000/a3');
-        // 所有任务执行完毕后才能拿到结果
-        // Promise.all([p1, p2, p3]).then(function(result){
+        // TODO:所有任务执行完毕后才能拿到结果
+        // Promise.all([p1, p2, p3]).then(function (result) {
         //     console.log(result);
         // })
-        // 得到最先返回的结果
+        // ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        // TODO:得到最先返回的结果
         Promise.race([p1, p2, p3]).then(function (result) {
             console.log(result);
         })
