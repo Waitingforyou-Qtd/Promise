@@ -28,7 +28,7 @@ app.get('/async2', (req, res) => {
 })
 
 app.get('/adata', (req, res) => {
-  res.send('Hello axios!')
+  res.send('Hello axios!!!')
 })
 app.get('/axios', (req, res) => {
   res.send('axios get 传递参数' + req.query.id)
