@@ -27,7 +27,9 @@
             // await 之后的返回值，就是这个 Promise resolve 的结果
             // await 必须会等待当前代码执行完毕，才会往后继续
             let r1 = await queryData('http://localhost:3000/data');
+            console.log(1);
             let r2 = await queryData('http://localhost:3000/data1');
+            console.log(111);
             let r3 = await queryData('http://localhost:3000/data2');
             console.log(r1, r2, r3);
         }
