@@ -23,15 +23,32 @@
 
 
 
+        // async function queryData() {
+        //     const r = await axios.get('adata')
+        //     // return r
+        //     // 上面写法，相当于内部会有下面的包装
+        //     return Promise.resolve(r);
+        // }
+        // queryData().then(res => {
+        //     console.log(res.data);
+        //     console.log(res);
+        // })
+
+
+
+
+
         async function queryData() {
-            const r = await axios.get('adata')
-            // return r
-            // 上面写法，相当于内部会有下面的包装
-            return Promise.resolve(r);
+            var ret = await new Promise(function (resolve, reject) {
+                setTimeout(function () {
+                    resolve('aaaaa')
+                }, 3000);
+            })
+            // console.log(ret.data)
+            return ret;
         }
-        queryData().then(res => {
-            console.log(res.data);
-            console.log(res);
+        queryData().then(function (data) {
+            console.log(data)
         })
     </script>
 </body>
