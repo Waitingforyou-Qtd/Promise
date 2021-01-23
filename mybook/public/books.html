@@ -191,18 +191,18 @@
         }
       },
       mounted: function () {
-        // var that = this;
-        // axios.get('books').then(function(data){
-        //   console.log(data.data)
-        //   that.books = data.data;
-        // })
+        var that = this;
+        axios.get('books').then(function (data) {
+          console.log(data.data)
+          that.books = data.data;
+        })
 
         // axios.get('books').then((data)=>{
         //   console.log(data.data)
         //   this.books = data.data;
         // })
 
-        this.queryData();
+        // this.queryData();
       }
     });
   </script>
