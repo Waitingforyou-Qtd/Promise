@@ -15,23 +15,23 @@
         // TODO:1. await 必须放 async 函数里面
         // TODO:2. await 后面一般都要跟一个 Promise，await 之后的返回值就是这个 Promise resolve 的结果
         // TODO:3. 用 async 修饰的函数是异步函数，异步函数调用完毕的返回值是 Promise
-        // async function queryData() {
-        //     const r = await axios.get('adata')
-        //     console.log(r);
-        // }
-        // queryData()
-
-
-
         async function queryData() {
             const r = await axios.get('adata')
-            // return r
-            // 上面写法，相当于内部会有下面的包装
-            return Promise.resolve(r);
+            console.log(r);
         }
-        queryData().then(res => {
-            console.log(res);
-        })
+        queryData()
+
+
+
+        // async function queryData() {
+        //     const r = await axios.get('adata')
+        //     // return r
+        //     // 上面写法，相当于内部会有下面的包装
+        //     return Promise.resolve(r);
+        // }
+        // queryData().then(res => {
+        //     console.log(res);
+        // })
     </script>
 </body>
 
