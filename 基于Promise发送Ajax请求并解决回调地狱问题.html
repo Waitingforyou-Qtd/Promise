@@ -30,14 +30,14 @@
             })
             return p
         }
-        queryData('http://localhost:3000/data')
-            // 获取数据
-            .then(function (data) {
-                console.log(data);
-                // return queryData('http://localhost:3000/data1')
-            }, function (info) {
-                console.log(info);
-            })
+        // queryData('http://localhost:3000/data')
+        //     // 获取数据
+        //     .then(function (data) {
+        //         console.log(data);
+        //         // return queryData('http://localhost:3000/data1')
+        //     }, function (info) {
+        //         console.log(info);
+        //     })
         // .then(function (date) {
         //     console.log(date);
         //     return queryData('http://localhost:3000/data2')
@@ -45,6 +45,12 @@
         // .then(function (data) {
         //     console.log(data);
         // })
+
+
+
+
+
+        
         // 多次任务通过.then方式变成线性 保证执行顺序  return的是新的Promise对象  data用于接收上次的异步任务得结果
         queryData('http://localhost:3000/data')
             .then(function (data) {
@@ -54,6 +60,10 @@
             .then(function (data) {
                 console.log(data);
                 return queryData('http://localhost:3000/data2');
+            })
+            .then(function (data) {
+                console.log(data);
+                return queryData('http://localhost:3000/data3');
             })
             .then(function (data) {
                 console.log(data)
