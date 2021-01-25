@@ -95,6 +95,11 @@ app.get('/a3', (req, res) => {
     res.send('Hello SPIKE!')
   }, 3000)
 })
+app.get('/a4', (req, res) => {
+  setTimeout(function () {
+    res.send('Hello JECK!')
+  }, 6000)
+})
 
 // 路由
 app.get('/data', (req, res) => {

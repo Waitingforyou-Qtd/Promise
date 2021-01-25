@@ -29,13 +29,14 @@
         var p1 = queryData('http://localhost:3000/a1');
         var p2 = queryData('http://localhost:3000/a2');
         var p3 = queryData('http://localhost:3000/a3');
+        var p4 = queryData('http://localhost:3000/a4');
         // TODO:所有任务执行完毕后才能拿到结果
         // Promise.all([p1, p2, p3]).then(function (result) {
         //     console.log(result);
         // })
         // ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
         // TODO:得到最先返回的结果
-        Promise.race([p1, p2, p3]).then(function (result) {
+        Promise.race([p1, p2, p3,p4]).then(function (result) {
             console.log(result);
         })
     </script>
