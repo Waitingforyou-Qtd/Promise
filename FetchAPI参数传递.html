@@ -37,33 +37,33 @@
         // --------------------------------------
 
         // TODO: DELETE请求方式参数传递
-        fetch('http://localhost:3000/books/ccccc', {
-                // 请求方式为delete
-                method: 'delete'
-            })
-            .then(function (data) {
-                return data.text()
-            }).then(function (data) {
-                console.log(data);
-            })
-
-        // --------------------------------------
-
-        // TODO:POST请求传参
-        // fetch('http://localhost:3000/books', {
-        //         // 请求方式为post
-        //         method: 'post',
-        //         body: 'uname=zx&pwd=123456',
-        //         // 必须配置请求头
-        //         headers: {
-        //             'Content-Type': 'application/x-www-form-urlencoded'
-        //         }
+        // fetch('http://localhost:3000/books/ccccc', {
+        //         // 请求方式为delete
+        //         method: 'delete'
         //     })
         //     .then(function (data) {
         //         return data.text()
         //     }).then(function (data) {
         //         console.log(data);
         //     })
+
+        // --------------------------------------
+
+        // TODO:POST请求传参
+        fetch('http://localhost:3000/books', {
+                // 请求方式为post
+                method: 'post',
+                body: 'uname=zx&age=20&pwd=123456',
+                // 必须配置请求头
+                headers: {
+                    'Content-Type': 'application/x-www-form-urlencoded'
+                }
+            })
+            .then(function (data) {
+                return data.text()
+            }).then(function (data) {
+                console.log(data);
+            })
 
         // --------------------------------------
 

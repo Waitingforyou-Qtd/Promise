@@ -66,7 +66,7 @@ app.delete('/books/:id', (req, res) => {
   res.send('DELETE请求传递参数!' + req.params.id)
 })
 app.post('/books', (req, res) => {
-  res.send('POST请求传递参数!' + req.body.uname + '^_^ ^_^' + req.body.pwd)
+  res.send('POST请求传递参数!' + req.body.uname + ' ^_^ ' + req.body.age + ' ^_^ ' + req.body.pwd)
 })
 app.put('/books/:id', (req, res) => {
   res.send('PUT请求传递参数!' + req.params.id + '^_^ ^_^' + req.body.uname + '^_^ ^_^' + req.body.pwd)
