@@ -24,44 +24,55 @@
         // // // TODO:这里没有打印的结果是因为异步
         // console.log(x);
 
-        // $.ajax({
-        //     url: 'http://localhost:3000/data',
-        //     success: function (data) {
-        //         console.log(data);
-        //     }
-        // });
-        // $.ajax({
-        //     url: 'http://localhost:3000/data1',
-        //     success: function (data) {
-        //         console.log(data);
-        //     }
-        // });
-        // $.ajax({
-        //     url: 'http://localhost:3000/data2',
-        //     success: function (data) {
-        //         console.log(data);
-        //     }
-        // });
 
-        // 嵌套方式 形成回调地狱
+
         $.ajax({
             url: 'http://localhost:3000/data',
             success: function (data) {
                 console.log(data);
-                $.ajax({
-                    url: 'http://localhost:3000/data1',
-                    success: function (data) {
-                        console.log(data);
-                        $.ajax({
-                            url: 'http://localhost:3000/data2',
-                            success: function (data) {
-                                console.log(data);
-                            }
-                        });
-                    }
-                });
             }
         });
+        $.ajax({
+            url: 'http://localhost:3000/data1',
+            success: function (data) {
+                console.log(data);
+            }
+        });
+        $.ajax({
+            url: 'http://localhost:3000/data2',
+            success: function (data) {
+                console.log(data);
+            }
+        });
+        $.ajax({
+            url: 'http://localhost:3000/data3',
+            success: function (data) {
+                console.log(data);
+            }
+        });
+
+
+
+
+        // 嵌套方式 形成回调地狱
+        // $.ajax({
+        //     url: 'http://localhost:3000/data',
+        //     success: function (data) {
+        //         console.log(data);
+        //         $.ajax({
+        //             url: 'http://localhost:3000/data1',
+        //             success: function (data) {
+        //                 console.log(data);
+        //                 $.ajax({
+        //                     url: 'http://localhost:3000/data2',
+        //                     success: function (data) {
+        //                         console.log(data);
+        //                     }
+        //                 });
+        //             }
+        //         });
+        //     }
+        // });
     </script>
 </body>
 

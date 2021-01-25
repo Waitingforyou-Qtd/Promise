@@ -98,7 +98,7 @@ app.get('/a3', (req, res) => {
 
 // 路由
 app.get('/data', (req, res) => {
-  res.send('Hello World!!!')
+  res.send('Hello World!')
 })
 app.get('/data1', (req, res) => {
   setTimeout(function () {
@@ -107,6 +107,11 @@ app.get('/data1', (req, res) => {
 })
 app.get('/data2', (req, res) => {
   res.send('Hello JERRY!')
+})
+app.get('/data3', (req, res) => {
+  setTimeout(function () {
+    res.send('Hello JOIN!')
+  }, 3000)
 })
 
 // 启动监听
