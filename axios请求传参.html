@@ -42,16 +42,17 @@
 
         // TODO: axios POST 请求传参
 
-        axios.post('http://localhost:3000/axios', {
-            uname: 'zx',
-            age: 20,
-            pwd: 123
-        }).then(function (ret) {
-            console.log(ret.data)
-        })
+        // axios.post('http://localhost:3000/axios', {
+        //     uname: 'zx',
+        //     age: 20,
+        //     pwd: 123456
+        // }).then(function (ret) {
+        //     console.log(ret.data)
+        // })
         var params = new URLSearchParams();
-        params.append('uname', 'zhangsan');
-        params.append('pwd', '111');
+        params.append('uname', 'z x');
+        params.append('age', '20');
+        params.append('pwd', '123123');
         axios.post('http://localhost:3000/axios', params).then(function (ret) {
             console.log(ret.data)
         })
