@@ -49,23 +49,26 @@
         // }).then(function (ret) {
         //     console.log(ret.data)
         // })
-        var params = new URLSearchParams();
-        params.append('uname', 'z x');
-        params.append('age', '20');
-        params.append('pwd', '123123');
-        axios.post('http://localhost:3000/axios', params).then(function (ret) {
-            console.log(ret.data)
-        })
+
+
+        // var params = new URLSearchParams();
+        // params.append('uname', 'zx');
+        // params.append('age', '20');
+        // params.append('pwd', '123123');
+        // axios.post('http://localhost:3000/axios', params).then(function (ret) {
+        //     console.log(ret.data)
+        // })
 
 
 
         // TODO:axios put 请求传参
-        // axios.put('http://localhost:3000/axios/123', {
-        //     uname: 'zx',
-        //     pwd: 123456
-        // }).then(function (ret) {
-        //     console.log(ret.data)
-        // })
+        axios.put('http://localhost:3000/axios/123', {
+            uname: 'zx',
+            age: 22,
+            pwd: 123456
+        }).then(function (ret) {
+            console.log(ret.data)
+        })
     </script>
 </body>
 

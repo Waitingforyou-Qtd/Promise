@@ -43,7 +43,7 @@ app.post('/axios', (req, res) => {
   res.send('axios post 传递参数' + req.body.uname + ' ^_^ ' + req.body.age + ' ^_^ ' + req.body.pwd)
 })
 app.put('/axios/:id', (req, res) => {
-  res.send('axios put 传递参数' + req.params.id + '^_^ ^_^' + req.body.uname + '^_^ ^_^' + req.body.age + '^_^ ^_^' + req.body.pwd)
+  res.send('axios put 传递参数' + req.params.id + '***' + req.body.uname + '***' + req.body.age + '***' + req.body.pwd)
 })
 
 app.get('/axios-json', (req, res) => {
