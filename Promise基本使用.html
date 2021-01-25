@@ -14,15 +14,17 @@
         // 打印的是Promise
         // console.dir(Promise)
         const p = new Promise(function (resolve, reject) {
-            // 成功调用resolve,失败调用reject
+            // TODO:成功调用resolve,失败调用reject
             setTimeout(function () {
                 var flag = true
                 if (flag) {
+                    // 成功结果
                     resolve('Hello!')
                 } else {
+                    // 失败结果
                     reject('出错了😭')
                 }
-            }, 200)
+            }, 500)
         })
         p.then(function (data) {
             // 从resolve得到正常结果
