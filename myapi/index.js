@@ -98,7 +98,7 @@ app.get('/a3', (req, res) => {
 
 // 路由
 app.get('/data', (req, res) => {
-  res.send('Hello World!')
+  res.send('Hello World!)
 })
 app.get('/data1', (req, res) => {
   setTimeout(function () {
