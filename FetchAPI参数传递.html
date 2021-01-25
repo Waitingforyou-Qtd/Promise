@@ -9,8 +9,8 @@
 
 <body>
     <script>
-        // TODO:GET参数传递-传统URL
-        // 传统的url通过?传参
+        // GET参数传递-传统URL
+        //  TODO: 传统的url通过?传参
         // fetch('http://localhost:3000/books?id=aaaaa', {
         //         // 请求方式为get
         //         method: 'get'
@@ -23,7 +23,7 @@
 
         // --------------------------------------
 
-        // TODO:GET参数传递-restful形式的URL 通过/传参
+        // TODO: GET参数传递-restful形式的URL 通过/传参
         // fetch('http://localhost:3000/books/bbbbb', {
         //         // 请求方式为get
         //         method: 'get'
@@ -36,16 +36,16 @@
 
         // --------------------------------------
 
-        // TODO:DELETE请求方式参数传递
-        // fetch('http://localhost:3000/books/ccccc', {
-        //         // 请求方式为delete
-        //         method: 'delete'
-        //     })
-        //     .then(function (data) {
-        //         return data.text()
-        //     }).then(function (data) {
-        //         console.log(data);
-        //     })
+        // TODO: DELETE请求方式参数传递
+        fetch('http://localhost:3000/books/ccccc', {
+                // 请求方式为delete
+                method: 'delete'
+            })
+            .then(function (data) {
+                return data.text()
+            }).then(function (data) {
+                console.log(data);
+            })
 
         // --------------------------------------
 
@@ -69,39 +69,39 @@
 
         // TODO:POST请求传参 JSON类型
 
-        fetch('http://localhost:3000/books', {
-                method: 'post',
-                body: JSON.stringify({
-                    uname: '周xx',
-                    pwd: '456666'
-                }),
-                headers: {
-                    'Content-Type': 'application/json'
-                }
-            })
-            .then(function (data) {
-                return data.text();
-            }).then(function (data) {
-                console.log(data)
-            });
+        // fetch('http://localhost:3000/books', {
+        //         method: 'post',
+        //         body: JSON.stringify({
+        //             uname: '周xx',
+        //             pwd: '456666'
+        //         }),
+        //         headers: {
+        //             'Content-Type': 'application/json'
+        //         }
+        //     })
+        //     .then(function (data) {
+        //         return data.text();
+        //     }).then(function (data) {
+        //         console.log(data)
+        //     });
 
 
         // //TODO: PUT请求传参
-        fetch('http://localhost:3000/books/123', {
-                method: 'put',
-                body: JSON.stringify({
-                    uname: '周周',
-                    pwd: '78999'
-                }),
-                headers: {
-                    'Content-Type': 'application/json'
-                }
-            })
-            .then(function (data) {
-                return data.text();
-            }).then(function (data) {
-                console.log(data)
-            });
+        // fetch('http://localhost:3000/books/123', {
+        //         method: 'put',
+        //         body: JSON.stringify({
+        //             uname: '周周',
+        //             pwd: '78999'
+        //         }),
+        //         headers: {
+        //             'Content-Type': 'application/json'
+        //         }
+        //     })
+        //     .then(function (data) {
+        //         return data.text();
+        //     }).then(function (data) {
+        //         console.log(data)
+        //     });
     </script>
 </body>
 
