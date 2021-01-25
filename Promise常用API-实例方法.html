@@ -24,8 +24,9 @@
             }, function (data) {
                 console.log(data);
             })
+            // TODO:    finally不管成功与否都会触发
             .finally(function () {
-                console.log('^_^ ^_^');
+                console.log('finished');
             })
     </script>
 </body>
