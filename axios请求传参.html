@@ -12,22 +12,22 @@
     <script>
         // axios请求参数传递
 
-        // axios get请求传参
-        axios.get('http://localhost:3000/axios?id=123').then(function (ret) {
-            console.log(ret)
-        })
+        // TODO: axios get请求传参
+        // axios.get('http://localhost:3000/axios?id=123').then(function (ret) {
+        //     console.log(ret.data)
+        // })
 
         // axios.get('http://localhost:3000/axios/123').then(function (ret) {
         //     console.log(ret.data)
         // })
 
-        // axios.get('http://localhost:3000/axios', {
-        //     params: {
-        //         id: '^_^abcdef'
-        //     }
-        // }).then(function (ret) {
-        //     console.log(ret.data)
-        // })
+        axios.get('http://localhost:3000/axios', {
+            params: {
+                id: 'abcdef'
+            }
+        }).then(function (ret) {
+            console.log(ret.data)
+        })
 
 
         // axios delete 请求传参
