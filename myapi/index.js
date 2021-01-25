@@ -3,7 +3,7 @@ const app = express()
 const bodyParser = require('body-parser')
 // 处理静态资源
 app.use(express.static('public'))
-// 处理参数
+// 处理参数 中间件
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({ extended: false }))
 
@@ -43,7 +43,7 @@ app.post('/axios', (req, res) => {
   res.send('axios post 传递参数' + req.body.uname + '^_^ ^_^' + req.body.pwd)
 })
 app.put('/axios/:id', (req, res) => {
-  res.send('axios put 传递参数' + req.params.id + '^_^ ^_^' + req.body.uname + '^_^ ^_^' + req.body.pwd)
+  res.send('axios put 传递参数' + req.params.id + '^_^ ^_^' + req.body.uname + '^_^ ^_^' + req.body.age + '^_^ ^_^' + req.body.pwd)
 })
 
 app.get('/axios-json', (req, res) => {
@@ -66,10 +66,10 @@ app.delete('/books/:id', (req, res) => {
   res.send('DELETE请求传递参数!' + req.params.id)
 })
 app.post('/books', (req, res) => {
-  res.send('POST请求传递参数!' + req.body.uname + ' ^_^ ' + req.body.age + ' ^_^ ' + req.body.pwd)
+  res.send('POST请求传递参数!' + req.body.uname + ' ^__^ ' + req.body.age + ' ^__^ ' + req.body.pwd)
 })
 app.put('/books/:id', (req, res) => {
-  res.send('PUT请求传递参数!' + req.params.id + '^_^ ^_^' + req.body.uname + '^_^ ^_^' + req.body.pwd)
+  res.send('PUT请求传递参数!' + req.params.id + ' ^_^' + req.body.uname + ' ^__^ ' + req.body.age + ' ^__^ ' + req.body.pwd)
 })
 
 app.get('/json', (req, res) => {

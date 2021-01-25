@@ -50,20 +50,20 @@
         // --------------------------------------
 
         // TODO:POST请求传参
-        fetch('http://localhost:3000/books', {
-                // 请求方式为post
-                method: 'post',
-                body: 'uname=zx&age=20&pwd=123456',
-                // 必须配置请求头
-                headers: {
-                    'Content-Type': 'application/x-www-form-urlencoded'
-                }
-            })
-            .then(function (data) {
-                return data.text()
-            }).then(function (data) {
-                console.log(data);
-            })
+        // fetch('http://localhost:3000/books', {
+        //         // 请求方式为post
+        //         method: 'post',
+        //         body: 'uname=zx&age=20&pwd=123456',
+        //         // 必须配置请求头
+        //         headers: {
+        //             'Content-Type': 'application/x-www-form-urlencoded'
+        //         }
+        //     })
+        //     .then(function (data) {
+        //         return data.text()
+        //     }).then(function (data) {
+        //         console.log(data);
+        //     })
 
         // --------------------------------------
 
@@ -73,6 +73,7 @@
         //         method: 'post',
         //         body: JSON.stringify({
         //             uname: '周xx',
+        //             age:20,
         //             pwd: '456666'
         //         }),
         //         headers: {
@@ -87,21 +88,22 @@
 
 
         // //TODO: PUT请求传参
-        // fetch('http://localhost:3000/books/123', {
-        //         method: 'put',
-        //         body: JSON.stringify({
-        //             uname: '周周',
-        //             pwd: '78999'
-        //         }),
-        //         headers: {
-        //             'Content-Type': 'application/json'
-        //         }
-        //     })
-        //     .then(function (data) {
-        //         return data.text();
-        //     }).then(function (data) {
-        //         console.log(data)
-        //     });
+        fetch('http://localhost:3000/books/888', {
+                method: 'put',
+                body: JSON.stringify({
+                    uname: '周周',
+                    age: 20,
+                    pwd: '78999'
+                }),
+                headers: {
+                    'Content-Type': 'application/json'
+                }
+            })
+            .then(function (data) {
+                return data.text();
+            }).then(function (data) {
+                console.log(data)
+            });
     </script>
 </body>
 
