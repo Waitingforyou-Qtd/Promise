@@ -21,25 +21,26 @@
         //     console.log(ret.data)
         // })
 
-        axios.get('http://localhost:3000/axios', {
-            params: {
-                id: 'abcdef'
-            }
-        }).then(function (ret) {
-            console.log(ret.data)
-        })
-
-
-        // axios delete 请求传参
-        // axios.delete('http://localhost:3000/axios', {
+        // axios.get('http://localhost:3000/axios', {
         //     params: {
-        //         id: 123456
+        //         id: 'abcdef'
         //     }
         // }).then(function (ret) {
         //     console.log(ret.data)
         // })
 
 
+        // TODO: axios delete 请求传参
+        axios.delete('http://localhost:3000/axios', {
+            params: {
+                id: 123456
+            }
+        }).then(function (ret) {
+            console.log(ret.data)
+        })
+
+
+        // TODO: axios POST 请求传参
 
         // axios.post('http://localhost:3000/axios', {
         //     uname: 'zx',
