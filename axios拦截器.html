@@ -10,21 +10,27 @@
 <body>
     <script src="js/axios.js"></script>
     <script>
+        // axios请求拦截器
         axios.interceptors.request.use(function (config) {
             console.log(config.url)
+            // 设置请求头
             config.headers.mytoken = 'nihao';
             return config;
         }, function (err) {
             console.log(err)
         })
+
+        // TODO: 响应拦截器
         axios.interceptors.response.use(function (res) {
-            console.log(res)
+            // 拦截器
+            // console.log(res)
             var data = res.data;
             return data;
         }, function (err) {
             console.log(err)
         })
         axios.get('http://localhost:3000/adata').then(function (data) {
+            // 最终的数据
             console.log(data)
         })
     </script>
